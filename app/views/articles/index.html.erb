@@ -1,0 +1,11 @@
+<h1>Wiki Articles</h1>
+
+<%= link_to "New article", new_article_path() %>
+
+<ul>
+<% @articles.sort.reverse.each do |article| %>
+<h3><%= link_to article.title.titleize, article_path(article) %></h3>
+<%= article.content.truncate(80) %>
+<% end %>
+
+</ul>

@@ -1,0 +1,6 @@
+<h1><%= @article.title.titleize %></h1>
+<p><%= @article.content %></p>
+
+
+<%= link_to "Edit article", edit_article_path(@article) %> || <%= link_to "Delete article", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Delete article: \"#{@article.title.titleize}\"?"} %></br></br>
+<%= link_to "< back to article list", articles_path %>

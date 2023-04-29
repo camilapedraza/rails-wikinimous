@@ -12,7 +12,7 @@ puts 'Creating 10 fake posts...'
 10.times do
   Article.create(
     title: Faker::Company.unique.bs,
-    content: Faker::Lorem.paragraphs(number: rand(2..4))
+    content: Faker::Lorem.paragraphs(number: rand(2..4)).join
   )
 end
 puts 'Finished!'
